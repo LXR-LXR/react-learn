@@ -1,0 +1,10 @@
+***组件中如果要增加属性 就在this.prop中写上属性onSubmit，在组件<CommentInput onSubmit>调用
+
+CommentApp 父组件 
+CommentInput 子组件 this.prop.onSubmit
+
+父组件CommentApp中调用CommentInput
+ <CommentInput onSubmit>
+在 CommentApp 中给 CommentInput 传入一个 onSubmit 属性，这个属性值是 CommentApp 自己的一个方法 handleSubmitComment。这样 CommentInput 就可以调用 this.props.onSubmit(…) 把数据传给 CommenApp。
+
+现在在 CommentInput 中输入完评论内容以后点击发布，就可以看到 CommentApp 在控制台打印的数据：
